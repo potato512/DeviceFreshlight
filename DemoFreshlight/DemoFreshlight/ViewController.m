@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "FreshlightManager.h"
+#import "SYFlashLight.h"
 
 @interface ViewController ()
 
@@ -39,7 +39,7 @@
 
 - (void)freshlightButtonClick:(UIBarButtonItem *)button
 {
-    [FreshlightManager showFreshlight];
+    [SYFlashLight showFreshlight];
 }
 
 @end

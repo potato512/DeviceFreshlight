@@ -1,17 +1,17 @@
 //
-//  FreshlightManager.m
-//  DemoFreshlight
+//  SYFlashLight.m
+//  zhangshaoyu
 //
 //  Created by zhangshaoyu on 14-6-23.
 //  Copyright (c) 2014年 zhangshaoyu. All rights reserved.
 //
 
-#import "FreshlightManager.h"
+#import "SYFlashLight.h"
 #import <AVFoundation/AVFoundation.h>
 
 static AVCaptureDevice *captureDevice;
 
-@implementation FreshlightManager
+@implementation SYFlashLight
 
 + (void)showFreshlight
 {

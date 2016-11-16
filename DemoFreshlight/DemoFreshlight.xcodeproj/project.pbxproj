@@ -22,7 +22,7 @@
 		A764BCB71957F9940052F5ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A764BCB51957F9940052F5ED /* InfoPlist.strings */; };
 		A764BCB91957F9940052F5ED /* DemoFreshlightTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A764BCB81957F9940052F5ED /* DemoFreshlightTests.m */; };
 		A764BCC31957FB210052F5ED /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A764BCC21957FB210052F5ED /* AVFoundation.framework */; };
-		A764BCC619580D720052F5ED /* FreshlightManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A764BCC519580D720052F5ED /* FreshlightManager.m */; };
+		A764BCC619580D720052F5ED /* SYFlashLight.m in Sources */ = {isa = PBXBuildFile; fileRef = A764BCC519580D720052F5ED /* SYFlashLight.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +56,8 @@
 		A764BCB61957F9940052F5ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A764BCB81957F9940052F5ED /* DemoFreshlightTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoFreshlightTests.m; sourceTree = "<group>"; };
 		A764BCC21957FB210052F5ED /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		A764BCC419580D720052F5ED /* FreshlightManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreshlightManager.h; sourceTree = "<group>"; };
-		A764BCC519580D720052F5ED /* FreshlightManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreshlightManager.m; sourceTree = "<group>"; };
+		A764BCC419580D720052F5ED /* SYFlashLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYFlashLight.h; sourceTree = "<group>"; };
+		A764BCC519580D720052F5ED /* SYFlashLight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYFlashLight.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +124,8 @@
 				A764BC9F1957F9940052F5ED /* Main.storyboard */,
 				A764BCA21957F9940052F5ED /* ViewController.h */,
 				A764BCA31957F9940052F5ED /* ViewController.m */,
-				A764BCC419580D720052F5ED /* FreshlightManager.h */,
-				A764BCC519580D720052F5ED /* FreshlightManager.m */,
+				A764BCC419580D720052F5ED /* SYFlashLight.h */,
+				A764BCC519580D720052F5ED /* SYFlashLight.m */,
 				A764BCA51957F9940052F5ED /* Images.xcassets */,
 				A764BC941957F9940052F5ED /* Supporting Files */,
 			);
@@ -259,7 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A764BCA41957F9940052F5ED /* ViewController.m in Sources */,
-				A764BCC619580D720052F5ED /* FreshlightManager.m in Sources */,
+				A764BCC619580D720052F5ED /* SYFlashLight.m in Sources */,
 				A764BC9E1957F9940052F5ED /* AppDelegate.m in Sources */,
 				A764BC9A1957F9940052F5ED /* main.m in Sources */,
 			);
@@ -466,6 +466,7 @@
 				A764BCBE1957F9940052F5ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A764BCBF1957F9940052F5ED /* Build configuration list for PBXNativeTarget "DemoFreshlightTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +475,7 @@
 				A764BCC11957F9940052F5ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
