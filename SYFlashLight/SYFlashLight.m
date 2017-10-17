@@ -13,7 +13,7 @@ static AVCaptureDevice *captureDevice;
 
 @implementation SYFlashLight
 
-+ (void)showFreshlight
++ (void)showFlashlight
 {
 	captureDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     
@@ -34,10 +34,10 @@ static AVCaptureDevice *captureDevice;
     }
     else
     {
-        [[[UIAlertView alloc] initWithTitle:@"温馨提醒"
-                                    message:@"抱歉，该设备没有闪光灯而无法使用闪光灯功能！"
+        [[[UIAlertView alloc] initWithTitle:AlertTitle
+                                    message:AlertMessage
                                    delegate:nil
-                          cancelButtonTitle:@"确定"
+                          cancelButtonTitle:AlertConfirm
                           otherButtonTitles:nil] show];
     }
 }

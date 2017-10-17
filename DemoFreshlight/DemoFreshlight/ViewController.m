@@ -39,7 +39,7 @@
 
 - (void)freshlightButtonClick:(UIBarButtonItem *)button
 {
-    [SYFlashLight showFreshlight];
+    [SYFlashLight showFlashlight];
 }
 
 @end

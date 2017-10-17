@@ -22,7 +22,8 @@
 		A764BCB71957F9940052F5ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A764BCB51957F9940052F5ED /* InfoPlist.strings */; };
 		A764BCB91957F9940052F5ED /* DemoFreshlightTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A764BCB81957F9940052F5ED /* DemoFreshlightTests.m */; };
 		A764BCC31957FB210052F5ED /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A764BCC21957FB210052F5ED /* AVFoundation.framework */; };
-		A764BCC619580D720052F5ED /* SYFlashLight.m in Sources */ = {isa = PBXBuildFile; fileRef = A764BCC519580D720052F5ED /* SYFlashLight.m */; };
+		A7CABE4F1F95D36600A68017 /* SYFlashLight.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CABE4E1F95D36600A68017 /* SYFlashLight.m */; };
+		A7CABE511F95D5A600A68017 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7CABE501F95D5A600A68017 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +57,9 @@
 		A764BCB61957F9940052F5ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A764BCB81957F9940052F5ED /* DemoFreshlightTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoFreshlightTests.m; sourceTree = "<group>"; };
 		A764BCC21957FB210052F5ED /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		A764BCC419580D720052F5ED /* SYFlashLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYFlashLight.h; sourceTree = "<group>"; };
-		A764BCC519580D720052F5ED /* SYFlashLight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYFlashLight.m; sourceTree = "<group>"; };
+		A7CABE4D1F95D36600A68017 /* SYFlashLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYFlashLight.h; sourceTree = "<group>"; };
+		A7CABE4E1F95D36600A68017 /* SYFlashLight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYFlashLight.m; sourceTree = "<group>"; };
+		A7CABE501F95D5A600A68017 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,12 +123,9 @@
 			children = (
 				A764BC9C1957F9940052F5ED /* AppDelegate.h */,
 				A764BC9D1957F9940052F5ED /* AppDelegate.m */,
-				A764BC9F1957F9940052F5ED /* Main.storyboard */,
 				A764BCA21957F9940052F5ED /* ViewController.h */,
 				A764BCA31957F9940052F5ED /* ViewController.m */,
-				A764BCC419580D720052F5ED /* SYFlashLight.h */,
-				A764BCC519580D720052F5ED /* SYFlashLight.m */,
-				A764BCA51957F9940052F5ED /* Images.xcassets */,
+				A7CABE4C1F95D36600A68017 /* SYFlashLight */,
 				A764BC941957F9940052F5ED /* Supporting Files */,
 			);
 			path = DemoFreshlight;
@@ -135,6 +134,9 @@
 		A764BC941957F9940052F5ED /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A7CABE501F95D5A600A68017 /* Default-568h@2x.png */,
+				A764BC9F1957F9940052F5ED /* Main.storyboard */,
+				A764BCA51957F9940052F5ED /* Images.xcassets */,
 				A764BC951957F9940052F5ED /* DemoFreshlight-Info.plist */,
 				A764BC961957F9940052F5ED /* InfoPlist.strings */,
 				A764BC991957F9940052F5ED /* main.m */,
@@ -159,6 +161,16 @@
 				A764BCB51957F9940052F5ED /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A7CABE4C1F95D36600A68017 /* SYFlashLight */ = {
+			isa = PBXGroup;
+			children = (
+				A7CABE4D1F95D36600A68017 /* SYFlashLight.h */,
+				A7CABE4E1F95D36600A68017 /* SYFlashLight.m */,
+			);
+			name = SYFlashLight;
+			path = ../../SYFlashLight;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A764BCA61957F9940052F5ED /* Images.xcassets in Resources */,
+				A7CABE511F95D5A600A68017 /* Default-568h@2x.png in Resources */,
 				A764BC981957F9940052F5ED /* InfoPlist.strings in Resources */,
 				A764BCA11957F9940052F5ED /* Main.storyboard in Resources */,
 			);
@@ -259,9 +272,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A764BCA41957F9940052F5ED /* ViewController.m in Sources */,
-				A764BCC619580D720052F5ED /* SYFlashLight.m in Sources */,
 				A764BC9E1957F9940052F5ED /* AppDelegate.m in Sources */,
 				A764BC9A1957F9940052F5ED /* main.m in Sources */,
+				A7CABE4F1F95D36600A68017 /* SYFlashLight.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

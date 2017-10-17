@@ -8,15 +8,31 @@
 
 #import <Foundation/Foundation.h>
 
+/// 提示语，可根据需要修改
+static NSString *const AlertTitle = @"温馨提醒";
+static NSString *const AlertMessage = @"抱歉，该设备不具备闪光灯功能！";
+static NSString *const AlertConfirm = @"确定";
+
 @interface SYFlashLight : NSObject
 
 /// 打开或关闭闪光灯
-+ (void)showFreshlight;
++ (void)showFlashlight;
 
 @end
 
 /*
- 调用设备闪光灯
+ 使用
+ 1 导入framework：AVFoundation.framework
+ 
+ 2 导入头文件
+ #import "SYFlashLight.h"
+ 
+ 3 使用，开灯或关灯
+ [SYFlashLight showFlashlight];
+ 
+ ————————————————————————————————————————————————————————————————————————————————————————————————
+ 
+ 调用设备闪光灯的原理说明
  使用“AVFoundation.framework”框架里的“AVCaptureDevice”来调用设备闪光灯。
  
  详细操作步骤如下：
