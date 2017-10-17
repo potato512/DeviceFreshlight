@@ -13,6 +13,9 @@ iPhone设备闪光灯的使用方法封装
 
 ~~~
 
+![flashLight.gif](./flashLight.gif)
+
+
 ## 修改说明
 * 20171017
   * 版本号：1.0.1
