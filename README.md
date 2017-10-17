@@ -9,7 +9,7 @@ iPhone设备闪光灯的使用方法封装
 #import "SYFlashLight.h"
 
 // 使用，开灯或关灯
-[SYFlashLight showFreshlight];
+[SYFlashLight showFlashlight];
 
 ~~~
 
