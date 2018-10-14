@@ -8,15 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
-/// 提示语，可根据需要修改
-static NSString *const AlertTitle = @"温馨提醒";
-static NSString *const AlertMessage = @"抱歉，该设备不具备闪光灯功能！";
-static NSString *const AlertConfirm = @"确定";
-
 @interface SYFlashLight : NSObject
 
-/// 打开或关闭闪光灯
-+ (void)showFlashlight;
+/**
+ 闪光灯单例
+ 
+ @return 闪光灯实例
+ */
++ (instancetype)shareFlash;
+
+
+/**
+ 闪光灯开关
+ 
+ @param complete 闪光灯开关状态回调
+ */
+- (void)openFlashLight:(void (^)(BOOL hasFlash, BOOL isOpen))complete;
 
 @end
 
@@ -28,7 +35,18 @@ static NSString *const AlertConfirm = @"确定";
  #import "SYFlashLight.h"
  
  3 使用，开灯或关灯
- [SYFlashLight showFlashlight];
+ [[SYFlashLight shareFlash] openFlashLight:^(BOOL hasFlash, BOOL isOpen) {
+     if (hasFlash) {
+        // 有闪光灯
+         if (isOpen) {
+             // 开
+         } else {
+             // 关
+         }
+     } else {
+        // 无闪光灯
+     }
+ }];
  
  ————————————————————————————————————————————————————————————————————————————————————————————————
  

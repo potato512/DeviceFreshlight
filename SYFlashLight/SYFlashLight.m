@@ -9,36 +9,63 @@
 #import "SYFlashLight.h"
 #import <AVFoundation/AVFoundation.h>
 
-static AVCaptureDevice *captureDevice;
+@interface SYFlashLight ()
+
+@property (nonatomic, strong) AVCaptureDevice *captureDevice;
+
+@end
 
 @implementation SYFlashLight
 
-+ (void)showFlashlight
++ (instancetype)shareFlash
 {
-	captureDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-    
-    if ([captureDevice hasTorch] && [captureDevice hasFlash])
-    {
-        if (captureDevice.torchMode == AVCaptureTorchModeOff)
-        {
-            [captureDevice lockForConfiguration:nil];
-            [captureDevice setTorchMode: AVCaptureTorchModeOn];
-            [captureDevice unlockForConfiguration];
-        }
-        else
-        {
-            [captureDevice lockForConfiguration:nil];
-            [captureDevice setTorchMode: AVCaptureTorchModeOff];
-            [captureDevice unlockForConfiguration];
-        }
+    static SYFlashLight *flashLight;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        flashLight = [[self alloc] init];
+    });
+    return flashLight;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.captureDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     }
-    else
+    return self;
+}
+
+- (void)openFlashLight:(void (^)(BOOL hasFlash, BOOL isOpen))complete
+{
+    BOOL enable = NO;
+    BOOL open = NO;
+    
+    if ([self.captureDevice hasTorch] && [self.captureDevice hasFlash])
     {
-        [[[UIAlertView alloc] initWithTitle:AlertTitle
-                                    message:AlertMessage
-                                   delegate:nil
-                          cancelButtonTitle:AlertConfirm
-                          otherButtonTitles:nil] show];
+        enable = YES;
+        
+        if (self.captureDevice.torchMode == AVCaptureTorchModeOff)
+        {
+            [self.captureDevice lockForConfiguration:nil];
+            [self.captureDevice setTorchMode: AVCaptureTorchModeOn];
+            [self.captureDevice unlockForConfiguration];
+            
+            open = YES;
+        } else {
+            [self.captureDevice lockForConfiguration:nil];
+            [self.captureDevice setTorchMode: AVCaptureTorchModeOff];
+            [self.captureDevice unlockForConfiguration];
+            
+            open = NO;
+        }
+    } else {
+        enable = NO;
+        open = NO;
+    }
+    
+    if (complete) {
+        complete(enable, open);
     }
 }
 
